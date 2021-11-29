@@ -2,7 +2,9 @@ def solution(brown, yellow):
     answer = []
     w = 0
     
-    print(yellow//2+1 )
+    if yellow == 1:
+        answer = [3, 3]
+
     for i in range(1, yellow//2+1):
         if yellow % i == 0:
             w = yellow // i
@@ -10,5 +12,3 @@ def solution(brown, yellow):
                 answer = [w+2, i+2]
                 break
     return answer
-
-solution(8, 1)
